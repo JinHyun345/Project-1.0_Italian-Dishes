@@ -68,8 +68,11 @@ a {
     color: black;
 }
 .theme{
-    width: 48px; height: 30px;
+    padding: 2px 2px;
     margin: 20px;
+    background-color: lightgray;
+    color: black;
+    border: none;
 }
 .menu{
     margin-bottom: 13px;

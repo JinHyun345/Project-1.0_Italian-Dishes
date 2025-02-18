@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Italian Dishes</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            var Body = {
+                setBackColor: function(color){
+                    document.querySelector('body').style.backgroundColor = color;
+                },
+                setColor: function(color){
+                            var bodylist = document.querySelectorAll('body');
+                            var i = 0;
+                            while(i < bodylist.length){
+                                bodylist[i].style.color = color;
+                                i = i + 1;
+                            }
+                }
+            }
+            var top = {
+                setColor: function(color){
+                    var toplist = document.querySelectorAll('.top a');
+                            var i = 0;
+                            while(i < toplist.length){
+                                toplist[i].style.color = color;
+                                i = i + 1;
+                            }
+                },
+                setBorderColor: function(color){
+                    document.querySelector('.top').style.borderColor = color;
+                }
+            }
+
+            function themeChange(self){
+                if(document.querySelector('.theme').value === 'WHITE'){
+                            Body.setBackColor('black')
+                            Body.setColor('white')
+                            var toplist = document.querySelectorAll('.top a');
+                            var i = 0;
+                            while(i < toplist.length){
+                                toplist[i].style.color = 'white';
+                                i = i + 1;
+                            }
+                            var menulist = document.querySelectorAll('.menu a');
+                            var i = 0;
+                            while(i < menulist.length){
+                                menulist[i].style.backgroundColor = 'violet';
+                                i = i + 1;
+                            }
+                            document.querySelector('.link').style.color = 'yellow';
+                            document.querySelector('.top').style.borderColor = 'white';
+                            document.querySelector('.home').style.borderColor = 'white';
+                            self.style.backgroundColor = 'white';
+
+                            self.value = 'BLACK';
+                        }
+                        else if(document.querySelector('.theme').value === 'BLACK'){
+                            Body.setBackColor('antiquewhite')
+                            Body.setColor('saddlebrown')
+                            var toplist = document.querySelectorAll('.top a');
+                            var i = 0;
+                            while(i < toplist.length){
+                                toplist[i].style.color = 'saddlebrown';
+                                i = i + 1;
+                            }
+                            var menulist = document.querySelectorAll('.menu a');
+                            var i = 0;
+                            while(i < menulist.length){
+                                menulist[i].style.backgroundColor = 'white';
+                                i = i + 1;
+                            }
+                            document.querySelector('.link').style.color = 'royalblue';
+                            document.querySelector('.top').style.borderColor = 'saddlebrown';
+                            document.querySelector('.home').style.borderColor = 'saddlebrown';
+                            self.style.backgroundColor = 'burlywood';
+
+
+                            self.value = 'BEIGE';
+                        }
+                        else {
+                            Body.setBackColor('white')
+                            Body.setColor('black')
+                            var toplist = document.querySelectorAll('.top a');
+                            var i = 0;
+                            while(i < toplist.length){
+                                toplist[i].style.color = 'black';
+                                i = i + 1;
+                            }
+                            var menulist = document.querySelectorAll('.menu a');
+                            var i = 0;
+                            while(i < menulist.length){
+                                menulist[i].style.backgroundColor = 'green';
+                                i = i + 1;
+                            }
+                            document.querySelector('.link').style.color = 'red';
+                            document.querySelector('.top').style.borderColor = 'black';
+                            document.querySelector('.home').style.borderColor = 'black';
+                            self.style.backgroundColor = 'lightgray';
+
+
+                            self.value = 'WHITE';
+                        }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="left"></div>
+        <div class="middle">
+            <div class="top">
+                <div class="home">
+                    <a href="projecthome.html">Italian<br>Dishes</a>
+                </div>
+                <div class="bar">
+                    <input class="theme" type="button" value="WHITE" onclick="themeChange(this)">
+                    <div class="menu">
+                        <a href="AglioeOlio.html">Aglio e Olio</a>
+                        <a href="TomatoPasta.html">Tomato Pasta</a>
+                        <a href="Carbonara.html">Carbonara</a>
+                        <a href="SaffronRisotto.html">Saffron Risotto</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="name">Italy</div>
+                <div class="content">
+                    <div class="text">
+                        Italy, country of south-central Europe, occupying a peninsula that juts deep into the Mediterranean Sea. Italy comprises some of the most varied and scenic landscapes on Earth and is often described as a country shaped like a boot. At its broad top stand the Alps, which are among the world’s most rugged mountains. Italy’s highest points are along Monte Rosa, which peaks in Switzerland, and along Mont Blanc, which peaks in France. The western Alps overlook a landscape of Alpine lakes and glacier-carved valleys that stretch down to the Po River and the Piedmont.
+                        <br><br>
+                    </div>
+                    
+                    <a class="link" href="https://youtu.be/RgwKV6Gs_OY?si=0PrfMeyguIdSVZ7O">
+                        About Italy
+                    </a><br><br>
+                </div>
+            </div>
+        </div>
+        <div class="right"></div>
+    </body>
+</html>
