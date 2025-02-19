@@ -68,11 +68,16 @@ a {
     color: black;
 }
 .theme{
-    padding: 2px 2px;
+    width: 48px; height: 30px;
+    padding: 0px;
     margin: 20px;
     background-color: lightgray;
     color: black;
     border: none;
+}
+.theme:hover{
+    background-color: gray;
+
 }
 .menu{
     margin-bottom: 13px;
@@ -157,8 +162,11 @@ a {
     }
     .theme{
         width: 48px; height: 30px;
-        margin: 6px;
-        margin-bottom: 15px;
+        padding: 2px 2px;
+        margin: 20px;
+        background-color: lightgray;
+        color: black;
+        border: none;
     }
     .menu{
         display: flex;
